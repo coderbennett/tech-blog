@@ -1,7 +1,7 @@
 {
   "name": "tech-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tech blog site where developers can publish their blog posts and comment on other developers' posts as well.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/coderbennett/tech-blog.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joey Bennett",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/coderbennett/tech-blog/issues"
