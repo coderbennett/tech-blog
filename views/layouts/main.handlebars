@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html data-theme="night" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.14.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">Tech Blog</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal p-0">
+                    {{#if loggedIn}}
+                    <li><a class="btn btn-ghost">logout</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+  <div class="items-center grid-flow-col">
+    {{!-- possibly place an tech themed icon here to navigate to top of page --}}
+    <p>Copyright © 2022 - All right reserved</p>
+  </div> 
+  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      {{!-- place social media links here if we want any --}}
+  </div>
+</footer>
+        {{#if loggedIn}}
+        <script src="/public/js/logout.js"></script>
+        {{/if}}
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
