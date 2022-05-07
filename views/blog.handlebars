@@ -1,0 +1,30 @@
+<div class="card w-11/12 bg-base-100 shadow-xl my-6">
+  <div class="card-body">
+    <h2 class="card-title">{{ blog.title }}</h2>
+    <p>Written by: user name here </p>
+    <p><small>{{ blog.date_created }}</small></p>
+    <p>{{ blog.content }}</p>
+  </div>
+</div>
+
+{{#each comments as |comment| }}
+<div class="card w-11/12 bg-base-100 shadow-xl my-6"></div>
+  <div class="card-body">
+    <h2 class="card-title"> user name here </h2>
+    <p><small>{{ comment.date_created }}</small></p>
+    <p>{{ comment.content }}</p>
+  </div>
+</div>
+{{/each}}
+
+{{#if loggedIn}}
+<div class="card w-11/12 bg-base-100 shadow-xl my-6"></div>
+  <div class="card-body">
+    <h2 class="card-title">Want to join the Conversation?</h2>
+    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <div class="card-actions justify-end">
+        <button class="btn btn-primary">Add Comment</button>
+        </div>
+  </div>
+</div>
+{{/if}}
