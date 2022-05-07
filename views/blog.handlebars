@@ -5,6 +5,7 @@
     <p><small>{{ blog.date_created }}</small></p>
     <p>{{ blog.content }}</p>
   </div>
+  {{!-- create if statement to show update/delete blog IF you are logged in as the user who made this post --}}
 </div>
 
 {{#each comments as |comment| }}
