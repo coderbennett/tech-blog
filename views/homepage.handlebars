@@ -4,9 +4,11 @@
     <h2 class="card-title">{{ blog.name }}</h2>
     <p>Created on: {{{ getDate blog.date_created }}}</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">View Blog</button>
+      <button class="viewBlog btn btn-primary" data-id='{{ blog.id }}'>View Blog</button>
     </div>
   </div>
 </div>
 {{/each}}
 {{!-- include script to handle/listen for view blog buttons --}}
+
+<script src="/js/viewBlogs.js"></script>
