@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/blog/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
             include: [{ model: User, model: Comment}]
@@ -44,7 +44,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/blog/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const blogData = await Blog.update({
             name: req.body.name,
@@ -62,7 +62,7 @@ router.put('/blog/:id', async (req, res) => {
     }
 });
 
-router.delete('/blog/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const blogData = await Blog.destroy({
             where: {

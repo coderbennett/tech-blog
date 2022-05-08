@@ -5,8 +5,7 @@ const dashboardRoutes = require('./dashboardRoutes');
 const Blog = require('../models/Blog');
 
 router.use('/api', apiRoutes);
-// router.use('/blog', blogRoutes);
-// router.use('/home', homepageRoutes);
+router.use('/blog', blogRoutes);
 // router.use('/dashboard', dashboardRoutes);
 
 router.get('/', async (req, res) => {
