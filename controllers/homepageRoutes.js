@@ -1,10 +1,9 @@
 const router = require('express').Router();
 const Blog = require('../models/Blog');
 
-const withAuth = require('../utils/auth');
 const session = require('express-session');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const blogData = await Blog.findAll();
 
@@ -13,12 +12,6 @@ router.get('/', withAuth, async (req, res) => {
         res.render('homepage', {blogs, loggedIn: req.session.loggedIn});
     } catch (err) {
         res.status(500).json(err);
-    }
-});
-
-router.get('/login', async (req, res) => {
-    if(req.session.loggedIn) {
-        res.redirect('/');
     }
 });
 
