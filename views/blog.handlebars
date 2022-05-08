@@ -1,25 +1,25 @@
-<div class="card w-11/12 bg-base-100 shadow-xl my-6">
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
   <div class="card-body">
     <h2 class="card-title">{{ blog.title }}</h2>
     <p>Written by: user name here </p>
-    <p><small>{{ blog.date_created }}</small></p>
+    <p><small> {{{ getDate blog.date_created }}}</small></p>
     <p>{{ blog.content }}</p>
   </div>
   {{!-- create if statement to show update/delete blog IF you are logged in as the user who made this post --}}
 </div>
 
 {{#each comments as |comment| }}
-<div class="card w-11/12 bg-base-100 shadow-xl my-6"></div>
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto"></div>
   <div class="card-body">
     <h2 class="card-title"> user name here </h2>
-    <p><small>{{ comment.date_created }}</small></p>
+    <p><small> {{{ getDate comment.date_created }}}</small></p>
     <p>{{ comment.content }}</p>
   </div>
 </div>
 {{/each}}
 
 {{#if loggedIn}}
-<div class="card w-11/12 bg-base-100 shadow-xl my-6"></div>
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto"></div>
   <div class="card-body">
     <h2 class="card-title">Want to join the Conversation?</h2>
     <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />

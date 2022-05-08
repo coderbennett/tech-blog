@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html data-theme="night" lang="en">
+<html data-theme="business" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
-    <link rel="stylesheet" href="/public/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.14.3/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -39,9 +38,11 @@
       {{!-- place social media links here if we want any --}}
   </div>
 </footer>
-        {{#if loggedIn}}
-        <script src="/public/js/logout.js"></script>
-        {{/if}}
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{else}}
+    <script src="/js/loginBtn.js"></script>
+    {{/if}}
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
