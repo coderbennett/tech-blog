@@ -1,16 +1,16 @@
 {{#each blogs as |blog| }}
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
+<div class="card w-11/12 bg-secondary shadow-xl my-6 mx-auto">
   <div class="card-body">
     <h2 class="card-title">{{ blog.name }}</h2>
     <p>{{ getDate blog.date_created }}</p>
     <div class="card-actions justify-end">
-      <button class="viewBlog btn btn-primary" data-id='{{ blog.id }}'>View Blog</button>
+      <button class="viewBlog btn btn-accent" data-id='{{ blog.id }}'>View Blog</button>
     </div>
   </div>
 </div>
 {{/each}}
 
-<button id="newBlogBtn" class="btn">New Post</button>
+<button id="newBlogBtn" class="btn btn-accent">New Post</button>
 {{!-- add script to handle/listen for newpost & viewblog button --}}
 <script src="/js/viewBlogs.js"></script>
 <script src="/js/newPost.js"></script>

@@ -1,30 +1,30 @@
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
+<div class="card w-11/12 bg-secondary shadow-xl my-6 mx-auto">
   <div class="card-body">
     <h2 class="card-title">{{ blog.name }}</h2>
-    <p><small>Written by: {{ blog.user.name }} </small></p>
-    <p><small>{{{ getDate blog.date_created }}}</small></p>
     <p>{{ blog.content }}</p>
+    <p><small>- {{ blog.user.name }} </small></p>
+    <p><small>{{{ getDate blog.date_created }}}</small></p>
     {{#if userOwned}}
-    <button id="updateBlogBtn" data-id="{{ blog.id }}" class="btn btn-primary">Update Blog</button>
-    <button id="deleteBlogBtn" data-id="{{ blog.id }}" class="btn btn-primary">Delete Blog</button>
+    <button id="updateBlogBtn" data-id="{{ blog.id }}" class="btn btn-accent">Update Blog</button>
+    <button id="deleteBlogBtn" data-id="{{ blog.id }}" class="btn btn-accent">Delete Blog</button>
     {{/if}}
   </div>
   {{!-- create if statement to show update/delete blog IF you are logged in as the user who made this post --}}
 </div>
 
 {{#each comments as |comment| }}
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
+<div class="card w-9/12 bg-neutral shadow-xl my-6 mx-auto">
   <div class="card-body">
+    <h3 class="card-title"> {{ comment.content }} </h3>
+    <p>- {{comment.user.name}}</p>
     <p><small> {{{ getDate comment.date_created }}}</small></p>
-    <h2 class="card-title"> {{ comment.content }} </h2>
-    <p>{{comment.user.name}}</p>
   </div>
 </div>
 {{/each}}
 
 {{#if loggedIn}}
 
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto flex justify-center"></div>
+<div class="card w-9/12 bg-neutral shadow-xl my-6 mx-auto flex justify-center"></div>
   <div class="card-body">
     <h2 class="card-title">Want to join the Conversation?</h2>
     <textarea id="commentContent" type="text" placeholder="Comment here" class="textarea textarea-bordered" ></textarea>
