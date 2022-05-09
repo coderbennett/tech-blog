@@ -1,5 +1,5 @@
 function redirectNewBlog() {
-    document.location.replace('/newblog');
+    document.location.replace('/blog/new');
 };
 
-document.querySelector('.blogPost').addEventListener('click', redirectNewBlog);
+document.querySelector('#newBlogBtn').addEventListener('click', redirectNewBlog);

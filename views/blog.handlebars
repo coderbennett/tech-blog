@@ -5,8 +5,8 @@
     <p><small>{{{ getDate blog.date_created }}}</small></p>
     <p>{{ blog.content }}</p>
     {{#if userOwned}}
-    <button id="updateBlogBtn" class="btn btn-primary">Update Blog</button>
-    <button id="deleteBlogBtn" class="btn btn-primary">Delete Blog</button>
+    <button id="updateBlogBtn" data-id="{{ blog.id }}" class="btn btn-primary">Update Blog</button>
+    <button id="deleteBlogBtn" data-id="{{ blog.id }}" class="btn btn-primary">Delete Blog</button>
     {{/if}}
   </div>
   {{!-- create if statement to show update/delete blog IF you are logged in as the user who made this post --}}
@@ -34,4 +34,8 @@
   </div>
 </div>
 {{!-- probably include script to handle/listen for add comment button here --}}
+{{/if}}
+
+{{#if userOwned}}
+<script src="/js/editPost.js"></script>
 {{/if}}
