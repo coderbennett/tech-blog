@@ -12,12 +12,23 @@ router.get('/:id', async (req, res) => {
                 { 
                     model: User,
                     attributes: ['name']
-                },
-                {
-                    model: Comment
                 }
             ]
         });
+
+        const commentData = await Comment.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['name']
+                }
+            ],
+            where: {
+                blog_id: req.params.id
+            }
+        });
+
+        const comments = commentData.map((comment) => comment.get({plain: true}));
 
         if(!blogData) {
             res.status(404).json({message: 'No blog with this id!'});
@@ -27,7 +38,7 @@ router.get('/:id', async (req, res) => {
 
         const userOwned = (req.session.userId === blog.user_id) ? true : false;
 
-        res.render('blog', {blog, loggedIn: req.session.loggedIn, userOwned});
+        res.render('blog', {blog, loggedIn: req.session.loggedIn, userOwned, comments});
     } catch (err) {
         res.status(500).json(err);
     }

@@ -13,11 +13,11 @@
 </div>
 
 {{#each comments as |comment| }}
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto"></div>
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
   <div class="card-body">
-    <h2 class="card-title"> {{comment.user.name}} </h2>
     <p><small> {{{ getDate comment.date_created }}}</small></p>
-    <p>{{ comment.content }}</p>
+    <h2 class="card-title"> {{ comment.content }} </h2>
+    <p>{{comment.user.name}}</p>
   </div>
 </div>
 {{/each}}
@@ -27,13 +27,14 @@
 <div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto flex justify-center"></div>
   <div class="card-body">
     <h2 class="card-title">Want to join the Conversation?</h2>
-    <textarea type="text" placeholder="Comment here" class="textarea textarea-bordered" ></textarea>
+    <textarea id="commentContent" type="text" placeholder="Comment here" class="textarea textarea-bordered" ></textarea>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Add Comment</button>
+      <button id="commentBtn" class="btn btn-primary" data-id="{{ blog.id }}" >Add Comment</button>
     </div>
   </div>
 </div>
 {{!-- probably include script to handle/listen for add comment button here --}}
+<script src="/js/addComment.js"></script>
 {{/if}}
 
 {{#if userOwned}}
