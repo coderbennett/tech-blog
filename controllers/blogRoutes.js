@@ -21,7 +21,9 @@ router.get('/:id', async (req, res) => {
         }
         const blog = blogData.get({ plain: true });
 
-        res.render('blog', {blog, loggedIn: req.session.loggedIn});
+        const userOwned = (req.session.userId === blog.user_id) ? true : false;
+
+        res.render('blog', {blog, loggedIn: req.session.loggedIn, userOwned});
     } catch (err) {
         res.status(500).json(err);
     }
