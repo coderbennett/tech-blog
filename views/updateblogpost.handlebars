@@ -10,7 +10,9 @@
                 <span>Content</span>
                 <textarea id="content-blog" type="text" placeholder="{{ blog.content }}" class="textarea textarea-bordered" ></textarea>
             </label>
-            <button id="submit-blog" class="btn btn-primary" type="submit">submit</button>
+            <button id="submit-blog" class="btn btn-primary" type="submit" data-id='{{ blog.id }}'>submit</button>
         </form>
     </div>
 </div>
+
+<script src="/js/updateBlogPost.js"></script>
