@@ -19,13 +19,14 @@
 {{/each}}
 
 {{#if loggedIn}}
-<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto"></div>
+
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto flex justify-center"></div>
   <div class="card-body">
     <h2 class="card-title">Want to join the Conversation?</h2>
-    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-        <div class="card-actions justify-end">
-        <button class="btn btn-primary">Add Comment</button>
-        </div>
+    <textarea type="text" placeholder="Comment here" class="textarea textarea-bordered" ></textarea>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Add Comment</button>
+    </div>
   </div>
 </div>
 {{!-- probably include script to handle/listen for add comment button here --}}
