@@ -3,6 +3,7 @@ const apiRoutes = require('./api');
 const blogRoutes = require('./blogRoutes');
 const dashboardRoutes = require('./dashboardRoutes');
 const Blog = require('../models/Blog');
+const User = require('../models/User');
 
 router.use('/api', apiRoutes);
 router.use('/blog', blogRoutes);

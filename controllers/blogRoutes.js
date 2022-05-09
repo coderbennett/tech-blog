@@ -4,7 +4,15 @@ const { Blog, User, Comment } = require('../models');
 router.get('/:id', async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
-            include: [{ model: User, model: Comment}]
+            include: [
+                { 
+                    model: User,
+                    attributes: ['name']
+                },
+                {
+                    model: Comment
+                }
+            ]
         });
 
         if(!blogData) {
