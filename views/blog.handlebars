@@ -1,4 +1,4 @@
-<div class="card w-11/12 bg-secondary shadow-xl my-6 mx-auto">
+<div class="card w-11/12 bg-neutral shadow-xl my-6 mx-auto">
   <div class="card-body">
     <h2 class="card-title">{{ blog.name }}</h2>
     <p>{{ blog.content }}</p>
@@ -13,7 +13,7 @@
 </div>
 
 {{#each comments as |comment| }}
-<div class="card w-9/12 bg-neutral shadow-xl my-6 mx-auto">
+<div class="card w-9/12 bg-secondary shadow-xl my-6 mx-auto">
   <div class="card-body">
     <h3 class="card-title"> {{ comment.content }} </h3>
     <p>- {{comment.user.name}}</p>
