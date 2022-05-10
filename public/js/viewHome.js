@@ -1,8 +1,8 @@
-const buttons = document.querySelectorAll('.homeBtn');
+const homeBtn = document.querySelector('#homeBtn');
+const techBlogBtn = document.querySelector('#techBlogBtn');
 
-buttons.forEach(button => {
-    button.addEventListener('click', redirectHome);
-})
+homeBtn.addEventListener('click', redirectHome);
+techBlogBtn.addEventListener('click', redirectHome);
 
 function redirectHome() {
     document.location.replace('/');
