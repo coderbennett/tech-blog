@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.14.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">Tech Blog</a>
+                <a class="btn btn-ghost normal-case text-xl homeBtn">Tech Blog</a>
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal p-0">
-                    <li><a id="homeBtn" class="btn btn-ghost mx-2">Home</a></li>
+                    <li><a class="btn btn-ghost mx-2 homeBtn">Home</a></li>
                     {{#if loggedIn}}
                     <li><a id="dashboardBtn" class="btn btn-ghost mx-2">Dashboard</a></li>
                     <li><a id="logoutBtn" class="btn btn-ghost mx-2">logout</a></li>
@@ -30,14 +31,14 @@
         {{{ body }}}
     </main>
     <footer class="footer items-center p-4 bg-neutral text-neutral-content">
-  <div class="items-center grid-flow-col">
-    {{!-- possibly place an tech themed icon here to navigate to top of page --}}
-    <p>Copyright © 2022 - All right reserved</p>
-  </div> 
-  <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-      {{!-- place social media links here if we want any --}}
-  </div>
-</footer>
+        <div class="items-center grid-flow-col">
+            {{!-- possibly place an tech themed icon here to navigate to top of page --}}
+            <p>Copyright © 2022 - All right reserved</p>
+        </div> 
+        <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            {{!-- place social media links here if we want any --}}
+        </div>
+    </footer>
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{else}}

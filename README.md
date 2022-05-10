@@ -19,6 +19,8 @@ If you are visiting the site for the first time you should sign up. There are so
 
 Once logged in, you can navigate to your dashboard to see all the blog posts you have created. You can create new blog posts by clicking the `New Post` button near the bottom of the page.
 
+![Animation of user creating a new blog post](media/newPost.gif)
+
 ## **Technologies**
 The technologies used in this application are as follows:
 * [Handlebars](https://handlebarsjs.com/)
