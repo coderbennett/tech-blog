@@ -4,7 +4,7 @@
         <h3>Title</h3>
         <input type="text" id="title-blog" placeholder="{{ blog.name }}" class="input input-bordered"/>
         <h3>Content</h3>
-        <textarea id="content-blog" type="text" placeholder="{{ blog.content }}" class="textarea textarea-bordered" ></textarea>
+        <textarea id="content-blog" type="text" class="textarea textarea-bordered" >{{ blog.content }}</textarea>
         <div class="card-actions justify-end">
             <button id="submit-blog" class="btn btn-primary" type="submit" data-id='{{ blog.id }}'>submit</button>
         </div>
