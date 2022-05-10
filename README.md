@@ -21,6 +21,12 @@ Once logged in, you can navigate to your dashboard to see all the blog posts you
 
 ![Animation of user creating a new blog post](media/newPost.gif)
 
+You can also edit or update your blog post after creating it by viewing your own post and clicking the corresponding buttons.
+
+![Animation of user editing and deleting a post](media\editDeletePost.gif)
+
+Users can also delete their own posts. Other than that, you are also able to comment on blog posts!
+
 ## **Technologies**
 The technologies used in this application are as follows:
 * [Handlebars](https://handlebarsjs.com/)
