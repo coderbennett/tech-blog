@@ -2,4 +2,4 @@ function redirectDashboard() {
     document.location.replace('/dashboard');
 };
 
-document.querySelector('#dashboardBtn').addEventListener('click', redirectDashboard);
+document.getElementById('#dashboardBtn').addEventListener('click', redirectDashboard);

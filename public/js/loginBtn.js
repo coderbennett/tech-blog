@@ -3,3 +3,9 @@ function redirectLogin() {
 };
 
 document.querySelector('#loginBtn').addEventListener('click', redirectLogin);
+
+function redirectSignup() {
+    document.location.replace('/signup');
+};
+
+document.querySelector('#signupBtn').addEventListener('click', redirectSignup);
